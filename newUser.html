@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="newUser" style="background-color: white; width: 400px; height: 350px; border-radius: 10px;">
+    <h1>Create Profile</h1>
+    <div id="inputs">
+      <input type="text" placeholder="Name" id="name"><br>
+      <input type="text" placeholder="User Name" id="newUserName"><br>
+      <input type="password" placeholder="Password" id="userPassword"><br>
+      <input type="password" placeholder="Confirm Password" id="confirmPassword"><br>
+    <button style="position: relative; top: 65px;"><a href="index.html" style="text-decoration: none; color: white;">Back to Login</a></button>
+    </div>
+    <button id="signup">Sign Up</button>
+  </div>
+  <div id="infoBar-newUser"></div>
+  <script src="newUser.js"></script>
+  <script src="ui.js"></script>
+  <script>
+    function showPassword(thisElement){
+      if(thisElement.type === "password"){
+        thisElement.type = "text";
+      } else {
+        thisElement.type = "password";
+      }
+    }
+    
+  </script>
+</body>
+</html>

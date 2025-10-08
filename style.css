@@ -1,0 +1,116 @@
+:root{
+  --color: rgb(0, 137, 82);
+}
+
+body{background-color: rgb(71, 71, 71); height: 100vh;}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+}
+
+#userAuth, #loader, #profile{position: absolute;top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+#userAuth{
+  width: 400px;
+  height: 250px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+#userAuth :not(h2, a:last-child){margin-left: 10px;}
+
+button{
+  border: none;
+  background-color: var(--color);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+#login, #signup{
+  position: relative;
+  left: 78%;
+  top: 10px;
+}
+button:active{
+  transform: scale(0.98);
+}
+#userInfo{margin-top: 30px;}
+
+input{
+  border: none;
+  width: 350px;
+  height: 25px;
+  border: 1px solid var(--color);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#loader{
+  width: 200px;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  display: none;
+}
+
+#loader .ball{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color);
+  animation: loading 0.5s infinite linear -2s;
+  animation-delay: calc((1 - var(--order)) * 0.2s);
+  z-index: 1;
+  display: inline-block;
+  margin-left: 3px;
+}
+
+#userAuth a{text-decoration: none;position: relative; top: 30px; color: var(--color)}
+
+#profile{
+  background-color: white;
+  border-radius: 10px;
+  width: 50vw;
+  height: 45vh;
+  display: none;
+}
+
+#profile :not(h1, button){margin: 10px;}
+
+#infoBar{
+  width: 350px;
+  height: 30px;
+  background-color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 50px;
+  border-radius: 0px 0px 20px 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  font-weight: bold;
+  display: none;
+}
+
+h1{
+  background-color: var(--color);
+  color: white;
+  margin: 0;
+  padding: 10px;
+  border-radius: 10px 10px  0 0;
+}
+
+
+#inputs {margin: 5%; }
+
+span{cursor: pointer; user-select: none;}
+
+@keyframes loading {
+  0%, 100%{transform: translateY(0px);}
+  50%{transform: translateY(5px);}
+}
